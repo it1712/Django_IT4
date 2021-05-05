@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %} Movie list {% endblock %}
+
+{% load static %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<div>
+
+    {% if movie.img %}
+    <div class="img">
+        <img src="{{ movie.img.url }}" class="img-fluid">
+    </div>
+    {% endif %}
+    <div class="info">
+        <div class="rating">
+            <div class="rating-content">
+                {{ movie.score }}%
+            </div>
+        </div>
+        <h3 class="">{{ movie.title }} <small>({{ movie.release_year }})</small></h3>
+        <div>
+            {% for g in movie.genres.all %}
+            {{g}}{% if not forloop.last %},
+            {% endif %}{% endfor %};
+            {{ movie.runtime }} min
+        </div>
+        <div>
+            Director:
+            <span>
+            {% for d in movie.directors.all %}
+            {{d}}{% if not forloop.last %},
+            {% endif %}
+            {% endfor %}
+            </span>
+        </div>
+        <div>
+            Writer:
+            <span>
+            {% for w in movie.writers.all %}
+            {{w}}{% if not forloop.last %},
+            {% endif %}
+            {% endfor %}
+            </span>
+        </div>
+        <div>
+            Cast:
+            <span>
+            {% for c in movie.cast.all %}
+            {{c}}{% if not forloop.last %},
+            {% endif %}
+            {% endfor %}
+            </span>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="description mt-5">
+    {{ movie.description }}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

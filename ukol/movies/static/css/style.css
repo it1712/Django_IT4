@@ -1,0 +1,125 @@
+:root {
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+* {
+    /*background-color: var(--dark);*/
+    color: var(--light);
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h1 a:hover{
+    color: inherit;
+}
+
+body {
+    background-color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.jumbotron-fluid {
+    background-color: #B60C0D !important;
+}
+
+footer {
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #343a40;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+    bottom: .5em;
+}
+
+table * {
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+}
+
+.dataTables_filter, .dataTables_info {
+    display: none;
+}
+
+table{
+    text-align: center;
+    width: 80% !important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    border-bottom: none !important;
+}
+
+.whitespace{
+    padding: 0;
+    margin-bottom: 100px!important;
+}
+
+.info{
+    overflow: hidden;
+}
+
+.info div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info span{
+    color: #B60C0D;
+}
+
+.clear{
+    clear: both;
+}
+
+.rating{
+    float: right;
+    display: block;
+}
+
+.rating-content{
+    font-size: 4em;
+    background-color: #B60C0D;
+    padding: 20px 30px 25px 30px;
+    border-radius: 10px;
+    vertical-align: center;
+
+}
+
+.description{
+    margin-bottom: 70px;
+}
+
+h3{
+    margin: 10px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 2em !important;
+}
+
+.img{
+    float: left
+}
+
+img{
+    float: left;
+    width: 260px;
+    margin-right: 40px;
+}
