@@ -7,7 +7,10 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input type="submit" value="Submit">
+    <div class="text-center m-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-danger" href="{% url 'list' %}" role="button">Cancel</a>
+    </div>
 </form>
 
 {% endblock %}
